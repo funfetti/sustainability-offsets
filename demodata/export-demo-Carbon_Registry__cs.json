@@ -1,0 +1,20 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Carbon_Registry__c",
+                "referenceId": "Carbon_Registry__cRef1"
+            },
+            "Name": "Gold Standard Impact Registry",
+            "Website__c": "https://www.goldstandard.org/"
+        },
+        {
+            "attributes": {
+                "type": "Carbon_Registry__c",
+                "referenceId": "Carbon_Registry__cRef2"
+            },
+            "Name": "Climate Action Reserve",
+            "Website__c": "https://www.climateactionreserve.org/"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+[
+    {
+        "sobject": "RecordType",
+        "saveRefs": true,
+        "resolveRefs": false,
+        "files": [
+            "export-demo-RecordTypes.json"
+        ]
+    }
+]

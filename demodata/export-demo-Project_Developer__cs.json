@@ -1,0 +1,20 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Project_Developer__c",
+                "referenceId": "Project_Developer__cRef1"
+            },
+            "Name": "ClimeCo",
+            "Website__c": "https://climeco.com/"
+        },
+        {
+            "attributes": {
+                "type": "Project_Developer__c",
+                "referenceId": "Project_Developer__cRef2"
+            },
+            "Name": "Proyecto Mirador",
+            "Website__c": "https://www.proyectomirador.org/"
+        }
+    ]
+}

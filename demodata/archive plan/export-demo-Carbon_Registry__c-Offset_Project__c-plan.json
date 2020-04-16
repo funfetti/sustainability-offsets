@@ -1,0 +1,18 @@
+[
+    {
+        "sobject": "Carbon_Registry__c",
+        "saveRefs": true,
+        "resolveRefs": false,
+        "files": [
+            "export-demo-Carbon_Registry__cs.json"
+        ]
+    },
+    {
+        "sobject": "Offset_Project__c",
+        "saveRefs": false,
+        "resolveRefs": true,
+        "files": [
+            "export-demo-Offset_Project__cs.json"
+        ]
+    }
+]

@@ -1,0 +1,24 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "RecordType",
+                "referenceId": "RecordTypeRef1"
+            },
+            "Description": "Internal Carbon Projects",
+            "Name": "Internal",
+            "SobjectType": "Offset_Project__c",
+            "DeveloperName":"Internal"
+        },
+        {
+            "attributes": {
+                "type": "RecordType",
+                "referenceId": "RecordTypeRef2"
+            },
+            "Description": "Voluntary Emission Reduction - External",
+            "Name": "VER",
+            "SobjectType": "Offset_Project__c",
+            "DeveloperName":"VER"
+        }
+    ]
+}

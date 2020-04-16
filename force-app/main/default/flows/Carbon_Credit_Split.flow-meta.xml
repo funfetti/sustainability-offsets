@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignments>
+        <name>assign_related_cc_retirement_record</name>
+        <label>assign related cc retirement record</label>
+        <locationX>422</locationX>
+        <locationY>50</locationY>
+        <assignmentItems>
+            <assignToReference>ccretirement.Carbon_Credit__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>get_current_Carbon_Credit.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ccretirement.Date_Retired__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ccretirement.Quantity__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Quantity_of_Credits_to_Retire</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ccretirement.Serial_Block_Start__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>RetirementSerialStart</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ccretirement.Serial_Block_End__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>RetirementSerialEnd</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>create_retirement_record</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>status = retired, add retirement date</description>
+        <name>Set_CC_to_retired</name>
+        <label>Set CC to retired</label>
+        <locationX>830</locationX>
+        <locationY>318</locationY>
+        <assignmentItems>
+            <assignToReference>get_current_Carbon_Credit.Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Retired</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>get_current_Carbon_Credit.Date_Retired__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>update_original_credit</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Are_there_remaining_credits</name>
+        <label>Are there remaining credits</label>
+        <locationX>691</locationX>
+        <locationY>51</locationY>
+        <defaultConnector>
+            <targetReference>end_screen</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Some Remaining</defaultConnectorLabel>
+        <rules>
+            <name>None_remaining</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>get_current_Carbon_Credit.Quantity_Remaining__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Quantity_of_Credits_to_Retire</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_CC_to_retired</targetReference>
+            </connector>
+            <label>None remaining</label>
+        </rules>
+    </decisions>
+    <description>Retires or splits issued carbon credits</description>
+    <formulas>
+        <name>RetirementSerialEnd</name>
+        <dataType>Number</dataType>
+        <expression>{!RetirementSerialStart} + {!Quantity_of_Credits_to_Retire} - 1</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>RetirementSerialStart</name>
+        <dataType>Number</dataType>
+        <expression>{!get_current_Carbon_Credit.Serial_Block_End__c} - {!get_current_Carbon_Credit.Quantity_Remaining__c} + 1</expression>
+        <scale>0</scale>
+    </formulas>
+    <interviewLabel>Carbon Credit Split {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Carbon Credit Split</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>create_retirement_record</name>
+        <label>create retirement record</label>
+        <locationX>565</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Are_there_remaining_credits</targetReference>
+        </connector>
+        <inputReference>ccretirement</inputReference>
+    </recordCreates>
+    <recordLookups>
+        <name>get_current_Carbon_Credit</name>
+        <label>get current Carbon Credit</label>
+        <locationX>183</locationX>
+        <locationY>50</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Option_Selection_Screen</targetReference>
+        </connector>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Carbon_Credit__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>update_original_credit</name>
+        <label>update original credit</label>
+        <locationX>694</locationX>
+        <locationY>417</locationY>
+        <connector>
+            <targetReference>end_screen</targetReference>
+        </connector>
+        <inputReference>get_current_Carbon_Credit</inputReference>
+    </recordUpdates>
+    <screens>
+        <name>end_screen</name>
+        <label>end screen</label>
+        <locationX>545</locationX>
+        <locationY>417</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>dt_end</name>
+            <fieldText>&lt;p&gt;Carbon Credit Retirement has been created.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Option_Selection_Screen</name>
+        <label>Retire Carbon Credits</label>
+        <locationX>309</locationX>
+        <locationY>50</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>assign_related_cc_retirement_record</targetReference>
+        </connector>
+        <fields>
+            <name>dt_Selection</name>
+            <fieldText>&lt;p&gt;There are {!get_current_Carbon_Credit.Quantity_Remaining__c} available.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;How many credits would you like to retire?&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Quantity_of_Credits_to_Retire</name>
+            <dataType>Number</dataType>
+            <defaultValue>
+                <elementReference>get_current_Carbon_Credit.Quantity_Remaining__c</elementReference>
+            </defaultValue>
+            <fieldText>Quantity of Credits to Retire</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+            <scale>0</scale>
+            <validationRule>
+                <errorMessage>&lt;p&gt;Cannot be greater than quantity available.&lt;/p&gt;</errorMessage>
+                <formulaExpression>{!Quantity_of_Credits_to_Retire} &lt;= {!get_current_Carbon_Credit.Quantity_Remaining__c}</formulaExpression>
+            </validationRule>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>get_current_Carbon_Credit</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>ccretirement</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Carbon_Credit_Retirement__c</objectType>
+    </variables>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SDG_Goals__c</fullName>
+    <externalId>false</externalId>
+    <label>SDG Goals</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 - No Poverty</fullName>
+                <default>false</default>
+                <label>1 - No Poverty</label>
+            </value>
+            <value>
+                <fullName>2 - Zero Hunger</fullName>
+                <default>false</default>
+                <label>2 - Zero Hunger</label>
+            </value>
+            <value>
+                <fullName>3 - Good Health and Well-Being</fullName>
+                <default>false</default>
+                <label>3 - Good Health and Well-Being</label>
+            </value>
+            <value>
+                <fullName>4 - Quality Education</fullName>
+                <default>false</default>
+                <label>4 - Quality Education</label>
+            </value>
+            <value>
+                <fullName>5 - Gender Equality</fullName>
+                <default>false</default>
+                <label>5 - Gender Equality</label>
+            </value>
+            <value>
+                <fullName>6 - Clean Water and Sanitation</fullName>
+                <default>false</default>
+                <label>6 - Clean Water and Sanitation</label>
+            </value>
+            <value>
+                <fullName>7 - Affordable and Clean Energy</fullName>
+                <default>false</default>
+                <label>7 - Affordable and Clean Energy</label>
+            </value>
+            <value>
+                <fullName>8 - Decent Work and Economic Growth</fullName>
+                <default>false</default>
+                <label>8 - Decent Work and Economic Growth</label>
+            </value>
+            <value>
+                <fullName>9 - Industry, Innovation, and Infrastructure</fullName>
+                <default>false</default>
+                <label>9 - Industry, Innovation, and Infrastructure</label>
+            </value>
+            <value>
+                <fullName>10 - Reduced Inequalities</fullName>
+                <default>false</default>
+                <label>10 - Reduced Inequalities</label>
+            </value>
+            <value>
+                <fullName>11 - Sustainable Cities and Communities</fullName>
+                <default>false</default>
+                <label>11 - Sustainable Cities and Communities</label>
+            </value>
+            <value>
+                <fullName>12 - Responsible Consumption and Production</fullName>
+                <default>false</default>
+                <label>12 - Responsible Consumption and Production</label>
+            </value>
+            <value>
+                <fullName>13 - Climate Action</fullName>
+                <default>false</default>
+                <label>13 - Climate Action</label>
+            </value>
+            <value>
+                <fullName>14 - Life Below Water</fullName>
+                <default>false</default>
+                <label>14 - Life Below Water</label>
+            </value>
+            <value>
+                <fullName>15 - Life On Land</fullName>
+                <default>false</default>
+                <label>15 - Life On Land</label>
+            </value>
+            <value>
+                <fullName>16 - Peace, Justice, and Strong Institutions</fullName>
+                <default>false</default>
+                <label>16 - Peace, Justice, and Strong Institutions</label>
+            </value>
+            <value>
+                <fullName>17 - Partnerships for the Goals</fullName>
+                <default>false</default>
+                <label>17 - Partnerships for the Goals</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

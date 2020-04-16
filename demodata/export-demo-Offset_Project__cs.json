@@ -1,0 +1,64 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Offset_Project__c",
+                "referenceId": "Offset_Project__cRef1"
+            },
+            "Estimated_GHG_Reduction__c": 38149,
+            "Methodology__c": "<p>GS TPDDTEC v 2.</p>",
+            "Name": "Proyecto Mirador Enhanced Distribution of Efficient Woodstoves",
+            "Project_Description__c": "Proyecto Mirador (PM) is a non-profit organization that sells Gold Standard carbon offsets to finance the construction of Dos por Tres fuel efficient stoves in Honduras. Dos por Tres stoves remove toxic smoke from homes, reduce CO2 emissions, save trees and create jobs. Mirador has built over 100,000 stoves since inception. In 2014 Mirador registered a Gold Standard PoA (Programme of Activities) that contains all updated project documentation (see <a href=\"https://products.markit.com/br-reg/public/master-project.jsp?project_id=103000000001450\" target=\"_blank\">https://products.markit.com/br-reg/public/master-project.jsp?project_id=103000000001450</a>)",
+            "Project_End_Date__c": "2019-04-30",
+            "Project_Location__c": "Honduras",
+            "Project_Number__c": "690",
+            "Project_Start_Date__c": "2009-05-01",
+            "Project_Type__c": "Energy Efficiency",
+            "SDG_Goals__c": "1 - No Poverty;2 - Zero Hunger;3 - Good Health and Well-Being;4 - Quality Education;5 - Gender Equality;7 - Affordable and Clean Energy;8 - Decent Work and Economic Growth;12 - Responsible Consumption and Production;13 - Climate Action;15 - Life On Land;16 - Peace, Justice, and Strong Institutions",
+            "Status__c": "Completed",
+            "Registry__c": "@Carbon_Registry__cRef1",
+            "Project_Developer__c": "@Project_Developer__cRef2",
+            "RecordTypeId": "012R0000001NZF8IAO"
+        },
+        {
+            "attributes": {
+                "type": "Offset_Project__c",
+                "referenceId": "Offset_Project__cRef2"
+            },
+            "Estimated_GHG_Reduction__c": 30000,
+            "Methodology__c": "<p>Climate Action Reserve Grassland <a href=\"https://www.climateactionreserve.org/how/protocols/grassland/\" target=\"_blank\">Protocol 2.1</a></p>",
+            "Name": "Grassland Preservation",
+            "Project_Description__c": "Increased drought and wildfire risk can make grasslands more reliable carbon sinks than trees. This project sequesters carbon by preserving and restoring grassland in the American Midwest.",
+            "Project_End_Date__c": "2068-12-31",
+            "Project_Location__c": "Illinois, USA",
+            "Project_Number__c": "CAR4778",
+            "Project_Start_Date__c": "2018-01-01",
+            "Project_Type__c": "Forestry",
+            "SDG_Goals__c": "12 - Responsible Consumption and Production;13 - Climate Action;15 - Life On Land",
+            "Status__c": "In Progress",
+            "Registry__c": "@Carbon_Registry__cRef1",
+            "Project_Developer__c": "@Project_Developer__cRef1",
+            "RecordTypeId": "012R0000001NZF8IAO"
+        },
+        {
+            "attributes": {
+                "type": "Offset_Project__c",
+                "referenceId": "Offset_Project__cRef3"
+            },
+            "Actual_GHG_Reduction__c": 63000,
+            "Baseline_GHG__c": 1220000,
+            "Basis__c": "<p>GHG savings are based on renewable diesel (RD) fuel having a lower GHG intensity than its fossil fuel equivalent, ULSD. The GHG intensity varies on a batch by batch basis and is calculated based on the specific energy density and carbon emission factors of each batch, sourced from Annex 3 of Renewable Energy Directive (RED). This complies with the International Sustainability and Carbon Certification (ISCC) system.</p>",
+            "Estimated_GHG_Reduction__c": 60000,
+            "Methodology__c": "<p>Other - ISCC principles were audited by Control Union. GHG Methodology from 2009/28/EC (RED 1) (ISCC) Annex 5</p>",
+            "Name": "Co-processing of biofeedstocks at Rotterdam refinery",
+            "Project_Description__c": "<p>Refinery in the Netherlands now manufactures fuels with a lower carbon footprint by co-processing vegetable oil with fossil fuel feedstocks. </p>",
+            "Project_End_Date__c": "2019-12-31",
+            "Project_Location__c": "UK",
+            "Project_Start_Date__c": "2019-01-01",
+            "Project_Type__c": "Biogas",
+            "SDG_Goals__c": "9 - Industry, Innovation, and Infrastructure;12 - Responsible Consumption and Production",
+            "Status__c": "In Progress",
+            "RecordTypeId": "012R0000001NZF7IAO"
+        }
+    ]
+}

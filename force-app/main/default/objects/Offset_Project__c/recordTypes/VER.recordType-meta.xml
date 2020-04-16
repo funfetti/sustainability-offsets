@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VER</fullName>
+    <active>true</active>
+    <description>Voluntary Emission Reduction - External</description>
+    <label>VER</label>
+    <picklistValues>
+        <picklist>Project_Type__c</picklist>
+        <values>
+            <fullName>Biogas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy Efficiency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Forestry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ozone Depleting Substances</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renewable Energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wetland Restoration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wind</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SDG_Goals__c</picklist>
+        <values>
+            <fullName>1 - No Poverty</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10 - Reduced Inequalities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11 - Sustainable Cities and Communities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12 - Responsible Consumption and Production</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>13 - Climate Action</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>14 - Life Below Water</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15 - Life On Land</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>16 - Peace%2C Justice%2C and Strong Institutions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>17 - Partnerships for the Goals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Zero Hunger</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Good Health and Well-Being</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Quality Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Gender Equality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6 - Clean Water and Sanitation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7 - Affordable and Clean Energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8 - Decent Work and Economic Growth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9 - Industry%2C Innovation%2C and Infrastructure</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Planned</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Credits_Issued__c</fullName>
+    <externalId>false</externalId>
+    <label>Credits Issued</label>
+    <summarizedField>Carbon_Credit__c.Quantity_Issued__c</summarizedField>
+    <summaryForeignKey>Carbon_Credit__c.Offset_Project__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

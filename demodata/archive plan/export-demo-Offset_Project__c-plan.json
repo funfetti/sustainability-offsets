@@ -1,0 +1,10 @@
+[
+    {
+        "sobject": "Offset_Project__c",
+        "saveRefs": true,
+        "resolveRefs": false,
+        "files": [
+            "export-demo-Offset_Project__cs.json"
+        ]
+    }
+]
