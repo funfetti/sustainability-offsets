@@ -19,7 +19,7 @@
         <pageOrSobjectType>Carbon_Credit__c</pageOrSobjectType>
     </actionOverrides>
     <brand>
-        <headerColor>#0070D2</headerColor>
+        <headerColor>#00A1E0</headerColor>
         <logo>X2018sf_sustainability_2C_icon_RGB</logo>
         <logoVersion>1</logoVersion>
         <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
@@ -28,13 +28,14 @@
     <formFactors>Large</formFactors>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
-    <label>Carbon Projects</label>
+    <label>Sustainability - Offsets</label>
     <navType>Console</navType>
     <tabs>Offset_Project__c</tabs>
     <tabs>Carbon_Credit__c</tabs>
     <tabs>Project_Developer__c</tabs>
     <tabs>Carbon_Registry__c</tabs>
     <tabs>Carbon_Credit_Retirement__c</tabs>
+    <tabs>standard-Feed</tabs>
     <tabs>standard-report</tabs>
     <tabs>standard-Dashboard</tabs>
     <uiType>Lightning</uiType>
@@ -58,6 +59,9 @@
         </mappings>
         <mappings>
             <tab>standard-Dashboard</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-Feed</tab>
         </mappings>
         <mappings>
             <tab>standard-report</tab>
