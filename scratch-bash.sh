@@ -24,7 +24,7 @@ read sname
 
 echo "your org is $sname"
 echo creating your scratch org... 
-sfdx force:org:create -f config/project-scratch-def.json -s -a sname
+sfdx force:org:create -f config/project-scratch-def.json -s -a $sname
 
 # 1.10
 sfdx force:package:install -p 04t3k000001yv66AAA -w 20 
