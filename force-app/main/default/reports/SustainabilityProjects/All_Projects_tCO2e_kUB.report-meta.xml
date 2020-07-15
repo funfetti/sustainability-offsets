@@ -9,13 +9,11 @@
             <axisBinding>y</axisBinding>
             <column>Offset_Project__c.Total_tCO2e__c</column>
         </chartSummaries>
-        <chartType>HorizontalBarStacked</chartType>
+        <chartType>HorizontalBar</chartType>
         <enableHoverLabels>false</enableHoverLabels>
         <expandOthers>true</expandOthers>
-        <groupingColumn>CUST_RECORDTYPE</groupingColumn>
-        <legendPosition>Right</legendPosition>
+        <groupingColumn>CUST_NAME</groupingColumn>
         <location>CHART_BOTTOM</location>
-        <secondaryGroupingColumn>Offset_Project__c.Project_Type__c</secondaryGroupingColumn>
         <showAxisLabels>true</showAxisLabels>
         <showPercentage>false</showPercentage>
         <showTotal>false</showTotal>
@@ -27,6 +25,9 @@
         <titleColor>#000000</titleColor>
         <titleSize>18</titleSize>
     </chart>
+    <columns>
+        <field>Offset_Project__c.Project_Type__c</field>
+    </columns>
     <columns>
         <aggregateTypes>Sum</aggregateTypes>
         <field>Offset_Project__c.Total_tCO2e__c</field>
@@ -49,12 +50,7 @@
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
-        <field>CUST_RECORDTYPE</field>
-        <sortOrder>Asc</sortOrder>
-    </groupingsDown>
-    <groupingsDown>
-        <dateGranularity>Day</dateGranularity>
-        <field>Offset_Project__c.Project_Type__c</field>
+        <field>CUST_NAME</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <name>All Projects tCO2e</name>

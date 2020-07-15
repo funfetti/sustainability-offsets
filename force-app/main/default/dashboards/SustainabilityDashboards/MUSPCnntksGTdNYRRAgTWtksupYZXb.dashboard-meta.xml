@@ -26,14 +26,14 @@
                 <drillToDetailEnabled>false</drillToDetailEnabled>
                 <enableHover>false</enableHover>
                 <expandOthers>false</expandOthers>
-                <groupingColumn>CUST_RECORDTYPE</groupingColumn>
+                <groupingColumn>CUST_NAME</groupingColumn>
                 <groupingSortProperties>
                     <groupingSorts>
                         <groupingLevel>g1</groupingLevel>
                         <sortOrder>d</sortOrder>
                     </groupingSorts>
                 </groupingSortProperties>
-                <header>Internal and External</header>
+                <header>All Offset Projects tCO2e</header>
                 <legendPosition>Bottom</legendPosition>
                 <report>SustainabilityProjects/All_Projects_tCO2e_kUB</report>
                 <showPercentage>false</showPercentage>
@@ -63,14 +63,14 @@
                 <drillToDetailEnabled>false</drillToDetailEnabled>
                 <enableHover>false</enableHover>
                 <expandOthers>false</expandOthers>
-                <groupingColumn>Offset_Project__c.Project_Type__c</groupingColumn>
+                <groupingColumn>CUST_NAME</groupingColumn>
                 <groupingSortProperties>
                     <groupingSorts>
                         <groupingLevel>g1</groupingLevel>
                         <sortOrder>a</sortOrder>
                     </groupingSorts>
                 </groupingSortProperties>
-                <header>Projects by Type</header>
+                <header>Offsets by Project Type</header>
                 <legendPosition>Right</legendPosition>
                 <maxValuesDisplayed>6</maxValuesDisplayed>
                 <report>SustainabilityProjects/All_Projects_tCO2e_kUB</report>
@@ -164,7 +164,7 @@
                         <sortOrder>a</sortOrder>
                     </groupingSorts>
                 </groupingSortProperties>
-                <header>Credits per Project</header>
+                <header>Credits per Offset Project</header>
                 <report>SustainabilityProjects/VER_per_Project_YXG</report>
             </dashboardComponent>
             <rowIndex>8</rowIndex>
@@ -175,9 +175,9 @@
     </dashboardGridLayout>
     <dashboardType>SpecifiedUser</dashboardType>
     <isGridLayout>true</isGridLayout>
-    <runningUser>test-lt3bz1knnq6i@example.com</runningUser>
+    <runningUser>test-abkyw0zhvtzk@example.com</runningUser>
     <textColor>#000000</textColor>
-    <title>Carbon Projects</title>
+    <title>Offsets Dashboard</title>
     <titleColor>#000000</titleColor>
     <titleSize>12</titleSize>
 </Dashboard>
