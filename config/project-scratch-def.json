@@ -1,8 +1,25 @@
 {
-  "orgName": "sustainability cloud offset component",
+  "orgName": "Sustainability Cloud - Offset component",
   "edition": "Developer",
+  "adminEmail": "sehdemo+sfdx@gmail.com",
   "features": [
-    "SustainabilityCloud",
-    "DevelopmentWave"
-  ]
+    "DevelopmentWave",
+    "SustainabilityCloud"
+  ],
+  "settings": {
+    "lightningExperienceSettings": {
+        "enableS1DesktopEnabled": true
+    },
+    "securitySettings": {
+        "passwordPolicies": {
+            "enableSetPasswordInApi": true
+        }
+    },
+    "mobileSettings": {
+        "enableS1EncryptedStoragePref2": false
+    },
+    "pathAssistantSettings": {
+      "pathAssistantEnabled": true
+    }
+  }
 }
