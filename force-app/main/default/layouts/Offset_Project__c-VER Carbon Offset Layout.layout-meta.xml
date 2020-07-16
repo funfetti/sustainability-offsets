@@ -19,6 +19,10 @@
                 <behavior>Readonly</behavior>
                 <field>Total_tCO2e__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Project_URL__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

@@ -105,16 +105,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
-        <field>Offset_Project__c.Baseline_GHG__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Offset_Project__c.Basis__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>false</editable>
         <field>Offset_Project__c.Credits_Issued__c</field>
         <readable>true</readable>
@@ -172,6 +162,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Offset_Project__c.Project_Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Offset_Project__c.Project_URL__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -251,10 +246,6 @@
         <object>Project_Developer__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
-    <recordTypeVisibilities>
-        <recordType>Offset_Project__c.Internal</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
     <recordTypeVisibilities>
         <recordType>Offset_Project__c.VER</recordType>
         <visible>true</visible>

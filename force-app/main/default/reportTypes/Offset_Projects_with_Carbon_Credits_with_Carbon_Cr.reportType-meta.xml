@@ -12,7 +12,7 @@
         <outerJoin>false</outerJoin>
         <relationship>Carbon_Credits__r</relationship>
     </join>
-    <label>Offset Projects with Carbon Credits with Carbon Credit Retirements</label>
+    <label>Offset Projects with Carbon Credits with Carbon Cr</label>
     <sections>
         <columns>
             <checkedByDefault>false</checkedByDefault>
@@ -131,22 +131,12 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Baseline_GHG__c</field>
-            <table>Offset_Project__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>Estimated_GHG_Reduction__c</field>
             <table>Offset_Project__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Actual_GHG_Reduction__c</field>
-            <table>Offset_Project__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Basis__c</field>
             <table>Offset_Project__c</table>
         </columns>
         <masterLabel>Offset Projects</masterLabel>
@@ -225,6 +215,21 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Serial_Block_End__c</field>
+            <table>Offset_Project__c.Carbon_Credits__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Quantity_Remaining__c</field>
+            <table>Offset_Project__c.Carbon_Credits__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Quantity_Retired__c</field>
+            <table>Offset_Project__c.Carbon_Credits__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Offset_Project__c</field>
             <table>Offset_Project__c.Carbon_Credits__r</table>
         </columns>
         <masterLabel>Carbon Credits</masterLabel>
