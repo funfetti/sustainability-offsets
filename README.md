@@ -3,7 +3,9 @@ I made this app to track:
 - VERs (credit issuances, retirements, project details)
 - Any internal avoidance or reduction projects
 
-This is an unofficial, unsupported package. We are looking for feedback! 
+### This is an unofficial, completely unsupported demo component.
+
+It has not been through security review or any other engineering hardening. **Do not use it in production or customer orgs;** it is meant to be an example of how this functionality could be implemented with Sustainability Cloud.
 
 # Installation:
 I included an unmanaged package in the docs above but I HIGHLY recommend you use DX to install the metadata instead. If you don't know how, here's a trailhead: 
